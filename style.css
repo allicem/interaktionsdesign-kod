@@ -1,0 +1,92 @@
+@charset "UTF-8"; 
+    
+body{
+background-color: rgb(243, 237, 237);
+font-family: 'Times New Roman', Times, serif;
+}
+ 
+
+
+.namn { 
+text-align: center;
+text-decoration: none;
+font-size: 2em;
+position: absolute;
+top: 10%;
+left: 50%;
+transform: translate(-50%, -80%);
+opacity: 70%;
+color: black;
+z-index: 1;
+border: solid 5px;
+border-left: 3rem;
+border-right: 3rem;
+}
+
+.knapp a{
+text-align: center;
+text-decoration: none;
+font-size: 35px;
+position: absolute;
+top: 35%;
+left: 50%;
+transform: translate(-50%, -80%);
+opacity: 70%;
+color: rgb(0, 0, 0);
+border: solid rgb(0, 0, 0);
+z-index: 1;
+    
+    
+
+
+}
+.omoss a{
+text-align: center;
+text-decoration: none;
+font-size: 2em;
+position: absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -80%);
+opacity: 70%;
+color: black;
+z-index: 1;
+}
+
+.box1{
+width: 320px;
+padding: 330px;
+border: 5px solid gray;
+margin: 100px; 
+align-items: center;
+} 
+
+.box2{
+width: 120px;
+padding: 330px;
+border: 5px solid gray;
+margin: 100px; 
+top: 2px;
+align-items: center;
+}
+
+.info1 a{
+font-size: 1.5em;
+position: absolute;
+top: 10%;
+left: 80%;
+opacity: 100%;
+text-decoration: none;
+color: black;
+
+}
+
+.info2 a {
+font-size: 1.5em;
+position: absolute;
+top: 10%;
+left: 70%;
+opacity: 100%;
+text-decoration: none;
+color: black;  
+}

@@ -31,29 +31,74 @@
 <div id="room-container" class="container">
     <h2>Välj ett rum</h2>
     <select id="room">
-        <option value="bilder/Homestyling.png">rum 1</option>
-        <option value="bilder/Homestyling2.png">rum 2</option>
-        <option value="bilder/Homestyling3.png">rum 3</option>
+        <option value="bilder/Homestyling.png">rum 1 - 7 meter brett</option>
+        <option value="bilder/Homestyling2.png">rum 2 - 5 meter brett</option>
+        <option value="bilder/Homestyling3.png">rum 3 - 7,6 meter brett</option>
+        <option value="bilder/homestyling6.png">rum 4 - 5,7 meter brett</option>
     </select>
+
     
+    
+        <div>
+            <button onclick="changeRoomColor('green')" >Grönt</button>
+        </div>
+    </div>
+  
+
     <div id="roomImageContainer" ondrop="drop(event)" ondragover="allowDrop(event)">
         <img id="roomImage" src="" alt="">
     </div>
-    <button onclick="resetFurnitureList()">Återställ möblerna</button>
-</div>
+
+    <div class="button-container">
+        <button onclick="resetFurnitureList()">Möbler tillbaka</button>
+        <button onclick="resetPage()">Ladda om</button>
+    </div>
+
+    <script>
+        function resetPage() {
+            // Ladda om sidan för att återställa dess ursprungliga tillstånd
+            location.reload();
+        }
+    </script>
+</script>
 
 <div>
     <h1>Möbler</h1>
-    <img src="bilder/soffa1.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag1">
-    <img src="bilder/soffa2.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag2">
-    <img src="bilder/stol.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag3">
-    <img src="bilder/bord.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag4">
+    <img src="bilder/soffa1.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag1" ondragend="showText('info1')">
+    <img src="bilder/soffa2.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag2" ondragend="showText('info2')">
+    <img src="bilder/stol.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag3" ondragend="showText('info3')">
+    <img src="bilder/bord.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag4" ondragend="showText('info4')">
+    <img src="bilder/soffa3.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag5" ondragend="showText('info5')">
+    <img src="bilder/stol2.png" class="draggable-image" draggable="true" ondragstart="drag(event)" id="drag6" ondragend="showText('info6')">
+</div>
+
+<div class="info-text" id="text-box">
+    <div id="info1" style="display: none;">
+        <p>Denna soffa är 3 meter bred</p>
+    </div>
+    <div id="info2" style="display: none;">
+        <p>Denna soffa är 2 meter bred</p>
+    </div>
+    <div id="info3" style="display: none;">
+        <p>Denna stol är 70 cm bred</p>
+    </div> 
+    <div id="info4" style="display: none;">
+        <p>Detta bord är 1,45 meter långt och 1 meter brett</p>
+    </div>
+    <div id="info5" style="display: none;">
+        <p>Denna soffa är 3,4 meter bred</p>
+    </div>
+    <div id="info6" style="display: none;">
+        <p>Denna stol är 1 meter bred</p>
+    </div>
+    <!-- Fler informationstexter för andra möbler -->
 </div>
 
 <script src="script.js"></script>
 
-
-        
+<div class="text">
+<h2>Här kan du testa placera ut de möbler du är interserad av. <br> knappen möbler tillbaka flyttar tillbaka  möblerna till deras <br> ursprungliga knapp och ladda om knappen laddar om sidan. <br> Du kan även byta färg på rummen om du vill se möblerna <br> mot färg.</h2>
+     </div>   
 
 </body>
 </html>

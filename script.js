@@ -5,6 +5,8 @@ var draggedItem = null;
 var placedInRoom = false;
 const largeFurniture = document.getElementById("drag3");
 const toBig = document.getElementById("drag4");
+const tooBig = document.getElementById("drag5");
+const toooBig = document.getElementById("drag6");
 // Skapa en räknare för att hantera nya bilder
 let imageCounter = 0;
 
@@ -15,8 +17,6 @@ document.addEventListener('dragover', function(event) {
 document.addEventListener('drop', function(event) {
     event.preventDefault();
     var data = event.dataTransfer.getData("text");
-    // Placera ditt droppade objekt här eller implementera enligt behov
-    // Exempel:
     var image = document.getElementById(data);
     var xPos = event.clientX;
     var yPos = event.clientY;
@@ -29,7 +29,6 @@ document.addEventListener('drop', function(event) {
 
 function allowDrop(ev) {
     ev.preventDefault();
-    // Här kan du ändra droppfunktionaliteten för hela sidan
     // Lägg till en global event listener för hela dokumentet
     document.addEventListener('dragover', function (event) {
         event.preventDefault();
@@ -63,7 +62,7 @@ function drop(ev) {
         var roomImageContainer = document.getElementById('roomImageContainer');
 
         var img = document.getElementById(data);
-        img.style.width = '250px'; // Ändra storlek på bilden vid släpp
+        img.style.width = '250px'; // Ändra storlek på bilden som släpp
 
         img.style.position = 'absolute';
         img.style.left = (ev.clientX - roomImageContainer.getBoundingClientRect().left) + 'px';
@@ -117,8 +116,38 @@ document.addEventListener('drop', (event) => {
 
 
 // Justera storleken på den större möbeln
-largeFurniture.style.width = "120px"; // Ange önskad bredd
+largeFurniture.style.width = "120px"; 
 largeFurniture.style.height = "auto"; 
 
-toBig.style.width = "200px"; // Ange önskad bredd
+toBig.style.width = "200px"; 
 toBig.style.height = "auto"; 
+
+tooBig.style.width = "400px"; 
+tooBig.style.height = "auto"; 
+
+toooBig.style.width = "150px"; 
+toooBig.style.height = "auto"; 
+
+
+
+function showText(infoId) {
+    var infoDiv = document.getElementById(infoId);
+    var textDivs = document.querySelectorAll('.text-box > div');
+
+    textDivs.forEach(function(div) {
+        div.style.display = 'none';
+    });
+
+    infoDiv.style.display = 'block';
+}
+
+function changeRoomColor(color) {
+    const roomImage = document.getElementById('roomImage');
+
+    // Om färgen är grön, byt ut bilden
+    if (color === 'green') {
+        roomImage.src = 'bilder/homestylingny1.png';
+        roomImage.style.width = '50%'; // Justera bredden till passa behovet
+        roomImage.style.height = 'auto'; // Anpassa höjden automatiskt
+    }
+}

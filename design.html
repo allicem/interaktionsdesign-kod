@@ -9,20 +9,28 @@
 </head>
 <body>
     <h1>Välj ett rum</h1>
-    <select id="imageDropdown">
+    <select id="imageDropdown" class="dropArea">
         <option value="bilder/Homestyling.png">rum 1</option>
         <option value="bilder/Homestyling2.png">rum 2</option>
         <option value="bilder/Homestyling3.png">rum 3</option>
     </select>
-   <body>
-   
+
+    
+    <div id="imageContainer">
+        <img id="displayedImage" src="" alt="Vald bild">
+    </div>
 
     <h2>Dra och släpp här:</h2>
-    <div id="dropArea1" class="dropArea">Släpp din bild här (Zon 1)</div>
+    <div id="dropArea1" class="dropArea"></div>
 
-    <div id="imageContainer">
-        <img id="displayedImage" src="bilder/soffa1.png" alt="Vald bild">
-    </div>
+
+
+    <img src="bilder/soffa1.png" class="draggable-image" alt="Bild 1">
+    <img src="bilder/image2.jpg" class="draggable-image" alt="Bild 2">
+    <img src="bilder/image3.jpg" class="draggable-image" alt="Bild 3">
+    <!-- Lägg till fler bilder här -->
+</div>
+
 
     <script src="script.js"></script>
 

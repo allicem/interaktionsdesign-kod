@@ -9,23 +9,32 @@ document.addEventListener('DOMContentLoaded', function () {
         displayedImage.src = selectedImage;
     });
 
-    dropAreas.forEach((dropArea, index) => {
-        dropArea.addEventListener('dragover', function (event) {
-            event.preventDefault(); // Förhindra standarddrag-och-släpp-beteende
-        });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const imageDropdown = document.getElementById('imageDropdown');
+    const displayedImage = document.getElementById('displayedImage');
 
-        dropArea.addEventListener('drop', function (event) {
-            event.preventDefault(); // Förhindra standarddrag-och-släpp-beteende
-            const file = event.dataTransfer.files[0];
-            const reader = new FileReader();
+    imageDropdown.addEventListener('change', function () {
+        const selectedImage = imageDropdown.value;
+        displayedImage.src = selectedImage;
+    });
 
-            reader.onload = function () {
-                displayedImage.src = reader.result;
-            };
+    // Nu kan du också använda detta element som en droppzon
+    imageDropdown.addEventListener('dragover', function (event) {
+        event.preventDefault();
+    });
 
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-        });
+    imageDropdown.addEventListener('drop', function (event) {
+        event.preventDefault();
+        const file = event.dataTransfer.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function () {
+            displayedImage.src = reader.result;
+        };
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
     });
 });

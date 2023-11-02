@@ -61,9 +61,6 @@ function drop(ev) {
     if (draggedItem && !placedInRoom) {
         var roomImageContainer = document.getElementById('roomImageContainer');
 
-        var img = document.getElementById(data);
-        img.style.width = '250px'; // Ändra storlek på bilden som släpp
-
         img.style.position = 'absolute';
         img.style.left = (ev.clientX - roomImageContainer.getBoundingClientRect().left) + 'px';
         img.style.top = (ev.clientY - roomImageContainer.getBoundingClientRect().top) + 'px';
@@ -75,18 +72,6 @@ function drop(ev) {
         
     }
 }
-
-
-// Hämta rum-elementet
-var roomSelect = document.getElementById("room");
-
-// Lyssna på förändringar i dropdown-menyn
-roomSelect.addEventListener("change", function() {
-    // Hämta vald bildkälla från dropdown-menyn
-    var selectedRoom = roomSelect.value;
-    // Uppdatera rummets bildkälla
-    document.getElementById("roomImage").src = selectedRoom;
-});
 
 // Lägg till eventlyssnare på bilderna för att lyssna på drag-händelser
 document.querySelectorAll('img').forEach(img => {
@@ -113,23 +98,6 @@ document.addEventListener('drop', (event) => {
     draggedElement.style.top = (event.clientY - draggedElement.clientHeight / 2) + 'px';
 });
 
-
-
-// Justera storleken på den större möbeln
-largeFurniture.style.width = "120px"; 
-largeFurniture.style.height = "auto"; 
-
-toBig.style.width = "200px"; 
-toBig.style.height = "auto"; 
-
-tooBig.style.width = "400px"; 
-tooBig.style.height = "auto"; 
-
-toooBig.style.width = "150px"; 
-toooBig.style.height = "auto"; 
-
-
-
 function showText(infoId) {
     var infoDiv = document.getElementById(infoId);
     var textDivs = document.querySelectorAll('.text-box > div');
@@ -149,5 +117,16 @@ function changeRoomColor(color) {
         roomImage.src = 'bilder/homestylingny1.png';
         roomImage.style.width = '50%'; // Justera bredden till passa behovet
         roomImage.style.height = 'auto'; // Anpassa höjden automatiskt
+      
     }
 }
+
+function visaMobler() {
+    var moblerDiv = document.getElementById("mobler");
+    moblerDiv.classList.remove("hidden");
+}
+
+   function changeImage(imagePath) {
+        var roomImage = document.getElementById('roomImage');
+        roomImage.src = imagePath;
+    }

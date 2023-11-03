@@ -73,7 +73,7 @@ function drop(ev) {
     }
 }
 
-// Lägg till eventlyssnare på bilderna för att lyssna på drag-händelser
+
 document.querySelectorAll('img').forEach(img => {
     img.setAttribute('draggable', true);
 
@@ -82,7 +82,7 @@ document.querySelectorAll('img').forEach(img => {
     });
 });
 
-// Lägg till eventlyssnare för att tillåta släpp på hela dokumentet
+
 document.addEventListener('dragover', (event) => {
     event.preventDefault();
 });

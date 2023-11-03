@@ -23,13 +23,13 @@ document.addEventListener('drop', function(event) {
     image.style.position = 'absolute';
     image.style.left = xPos + 'px';
     image.style.top = yPos + 'px';
-    document.body.appendChild(image); // Du kan ändra detta beroende på var du vill att bilden ska hamna
+    document.body.appendChild(image); 
 });
 
 
 function allowDrop(ev) {
     ev.preventDefault();
-    // Lägg till en global event listener för hela dokumentet
+    // Lägger till en global event listener för hela dokumentet
     document.addEventListener('dragover', function (event) {
         event.preventDefault();
     });
@@ -115,8 +115,8 @@ function changeRoomColor(color) {
     // Om färgen är grön, byt ut bilden
     if (color === 'green') {
         roomImage.src = 'bilder/homestylingny1.png';
-        roomImage.style.width = '50%'; // Justera bredden till passa behovet
-        roomImage.style.height = 'auto'; // Anpassa höjden automatiskt
+        roomImage.style.width = '50%'; // Justera bredden t
+        roomImage.style.height = 'auto'; // Anpassa höjden 
       
     }
 }

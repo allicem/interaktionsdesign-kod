@@ -35,13 +35,13 @@ opacity: 70%;
 color: rgb(0, 0, 0);
 border: solid rgb(0, 0, 0);
 z-index: 1;
-background-color: black; /* Färg på knappen */
-color: white; /* Textfärg */
+background-color: black; 
+color: white; 
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 150px 150px; /* Justera kudde (padding) för att öka knappens storlek */
-font-size: 35px; /* Ändra textstorlek */
+padding: 150px 150px; 
+font-size: 35px; 
 }
 
 #roomImageContainer {
@@ -92,18 +92,19 @@ button {
     border-width: 10px;
     padding: 17px;
     
+    
 }
 
 .text h2 {
     text-align: right;
-    font-size: 18px;
+    font-size: 22px;
     
 }
 .info-text {
     position: absolute;
     right: 400px; 
     margin: 50px;
-    top: 300px; 
+    top: 340px; 
     right: 20px; 
     margin: 30px;
     border: solid white;

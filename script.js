@@ -115,7 +115,7 @@ function changeRoomColor(color) {
     // Om färgen är grön, byt ut bilden
     if (color === 'green') {
         roomImage.src = 'bilder/homestylingny1.png';
-        roomImage.style.width = '50%'; // Justera bredden t
+        roomImage.style.width = '50%'; // Justera bredden 
         roomImage.style.height = 'auto'; // Anpassa höjden 
       
     }

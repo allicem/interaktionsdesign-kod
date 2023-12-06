@@ -74,10 +74,10 @@ function drop(ev) {
 }
 
 
-document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('draggable', true);
+document.querySelectorAll('mobler').forEach(mobler => {
+  mobler.setAttribute('draggable', true);
 
-    img.addEventListener('dragstart', (event) => {
+   mobler.addEventListener('dragstart', (event) => {
         event.dataTransfer.setData('text/plain', event.target.id);
     });
 });
@@ -130,3 +130,5 @@ function visaMobler() {
         var roomImage = document.getElementById('roomImage');
         roomImage.src = imagePath;
     }
+
+    
